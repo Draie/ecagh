@@ -1,0 +1,158 @@
+a {
+    font-family: 'Anybody', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+   
+}
+.navbar a li {
+    list-style: none;
+    padding: 10px;
+    max-width: 180px;
+    text-align: center;
+   
+}
+
+.navbar a li:hover{
+ text-shadow: #0A328C;
+ border-bottom: 3px solid #D21034;
+
+}
+
+/* MENU EN LISTE DEROULANTE */
+#hiden_menu{
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    position:absolute ;
+    left: -10000px;
+    top:-1000px;
+    max-height: 0px;
+    max-width: 0px;
+   
+}
+#hiden_menu a{
+    list-style: none;
+    font-weight: bolder;
+    color: white;
+
+}
+
+
+
+.navbar{
+  
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    padding: 20px;
+    height: 150px;
+    max-width: 100%;
+    @media only screen and (max-width: 800px) {
+        padding: 1px;
+        height: 90px;
+       
+ 
+ 
+     }
+}
+
+.navbar h3{
+    font-size: 45px;
+    align-content: center;
+      
+    @media only screen and (max-width: 800px) {
+       font-size: 30px;
+       margin: 2px;
+      
+
+
+    }
+   
+
+
+}
+.menu-item{
+     display: flex;
+     gap: 5rem;
+  
+     @media only screen and (max-width: 800px) {
+        
+        width: 0px;
+       height: 0px;
+        gap: 0px;
+        position: absolute;
+        top: -1000px;
+        right: -300px;
+
+
+    }
+
+}
+
+
+
+.red_cta  {
+    background-color: #D21034;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    visibility: visible;
+    @media only screen and (max-width: 800px) {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+
+
+    }
+}
+#menuBurger{
+    max-width: 30px;
+    max-height: 30px;
+}
+#menuBurger svg{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    top: 68px;
+    right: 50px;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    @media only screen and (max-width: 800px) {
+        visibility: visible;
+        top: 30px;
+        width: 35px;
+        height: 35px;
+      /*  margin-right: 2rem;*/
+
+    };
+    @media only screen and (max-width: 430px) {
+      
+
+       
+        right:  30px;
+    }
+}
+
+.menuSvg a{
+  
+    max-width: 30px;
+    max-height: 30px;
+}
+.red_cta:hover{
+    background-color: #0A328C;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
+
+
+
