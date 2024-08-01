@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<body>
+
+
+{{ include('navbar.html.twig') }}
+
+
+<main>
+        <div  class="herobanner">
+           <!-- insérer une belle image </!---->
+            </div>
+        </div>
+        <div class="cta2">
+        <a  class="basic_cta"href="https://www.leetchi.com/fr/c/soutenir-ecagh-1888973?utm_source=copylink&utm_medium=social_sharing"target="_blank"><li > Faire un don </li></a>
+        </div>
+<div class="article_part">
+        <h1 class="h2title">Actualité</h1>
+        <div class="newsContainers">
+         {% for article in article | sort| slice(0, 4)  %}
+                <div class="articleItems">
+
+                <div class="pictureContainer">
+                       <img class="img-thumbnail" src="{{ asset('uploads/photos/' ~ article.picture1) }}" alt="photo">
+                </div>
+                       <div class="textContainer">
+                        <h3 class="newsTitle"> {{ article.title }}</h3>
+                        <p id="newsDescription"> {{ article.description }} </p>
+                       
+                             <a class="hidden-cta" href="{{ path('app_article_show', {'id': article.id}) }}">En savoir plus</a>
+                     
+                        </div>
+                  
+
+                </div>
+
+                {% else %}
+        <li class="messageVide">Aucune actualité en ce moment</li>
+                       
+                          
+        {% endfor %}
+        </div>
+</div>
+
+
+</main>
+
+
+
+</body>
+{% endblock %}
