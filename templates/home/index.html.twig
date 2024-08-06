@@ -9,44 +9,79 @@
 
 
 <main>
+
         <div  class="herobanner">
-           <!-- insérer une belle image </!---->
+           <!-- insérer une belle image </!-->
+           <img src="{{ asset('images\herobanner.png') }}" alt="Description de l'image">
+
+
             </div>
         </div>
+        <!-- BOUTON FAIRE UN DON -->
         <div class="cta2">
         <a  class="basic_cta"href="https://www.leetchi.com/fr/c/soutenir-ecagh-1888973?utm_source=copylink&utm_medium=social_sharing"target="_blank"><li > Faire un don </li></a>
         </div>
-<div class="article_part">
-        <h1 class="h2title">Actualité</h1>
-        <div class="newsContainers">
-         {% for article in article | sort| slice(0, 4)  %}
-                <div class="articleItems">
+<!-- CONTENEUR DE LA PARTIE ACTUALITE  -->
+                <div class="article_part">
+                        <h1 class="h2title">Actualité</h1>
+                        <div class="newsContainers">
+                                {% for article in article | sort| slice(0, 4)  %}
+                                        <div class="articleItems">
 
-                <div class="pictureContainer">
-                       <img class="img-thumbnail" src="{{ asset('uploads/photos/' ~ article.picture1) }}" alt="photo">
-                </div>
-                       <div class="textContainer">
-                        <h3 class="newsTitle"> {{ article.title }}</h3>
-                        <p id="newsDescription"> {{ article.description }} </p>
-                       
-                             <a class="hidden-cta" href="{{ path('app_article_show', {'id': article.id}) }}">En savoir plus</a>
-                     
+                                                <div class="pictureContainer">
+                                                        <img class="img-thumbnail" src="{{ asset('uploads/photos/' ~ article.picture1) }}" alt="photo">
+                                                        </div>
+                                                        <div class="textContainer">
+                                                                <h3 class="newsTitle"> {{ article.title }}</h3>
+                                                                <p id="newsDescription"> {{ article.description }} </p>
+                                                        
+                                                                <a class="hidden-cta" href="{{ path('app_article_show', {'id': article.id}) }}">En savoir plus</a>
+                                                
+                                                </div>
+                                        </div>
+
+                                        {% else %}
+                                        <li class="messageVide">Aucune actualité en ce moment</li>
+                                        
+                                                        
+                                {% endfor %}
+                                
                         </div>
-                  
-
                 </div>
-
-                {% else %}
-        <li class="messageVide">Aucune actualité en ce moment</li>
-                       
-                          
-        {% endfor %}
-        </div>
-</div>
-
 
 </main>
 
+<footer>
+        <footer style="background-color: #343a40; color: white; padding: 20px 0; text-align: center;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-direction: column; align-items: center;">
+        <div style="margin-bottom: 20px;">
+            <a href="https://www.facebook.com/ecagh509" target="_blank" style="margin: 0 10px; color: white; text-decoration: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z ff"/></svg>
+            
+            </a>
+           <!-- <a href="https://www.twitter.com" target="_blank" style="margin: 0 10px; color: white; text-decoration: none;">
+                <img src="twitter-icon.png" alt="Twitter" style="width: 30px; height: 30px;">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" style="margin: 0 10px; color: white; text-decoration: none;">
+                <img src="instagram-icon.png" alt="Instagram" style="width: 30px; height: 30px;">
+            </a>
+            -->
+        </div>
+        <div style="margin-bottom: 20px;">
+            <p style="margin: 0;">© 2024 ECAGH. Tous droits réservés.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <a href="mailto:phaitusdieuveux@yahoo.fr" style="color: white; text-decoration: none;">
+                phaitusdieuveux@yahoo.fr
+            </a>
+            <p style="margin: 0;">Adresse : 50 ,rue abel fauveeu , Deuil-la-Barre, France</p>
+            <p style="margin: 0;">Téléphone : 06 62 90 63 27</p>
+        </div>
+        <div>
+            <a href="/mentions-legales" style="color: white; text-decoration: none; margin: 0 10px;">Mentions Légales</a> |
+            <a href="/politique-de-confidentialite" style="color: white; text-decoration: none; margin:
+
+</footer 
 
 
 </body>

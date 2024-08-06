@@ -46,6 +46,7 @@ a {
     display: flex;
     gap: 5rem;
     justify-content: center;
+    align-items: center;
     padding: 20px;
     height: 150px;
     max-width: 100%;
@@ -58,13 +59,16 @@ a {
      }
 }
 
-.navbar h3{
+.navbar a h3{
     font-size: 45px;
     align-content: center;
+  
+    
       
     @media only screen and (max-width: 800px) {
        font-size: 30px;
        margin: 2px;
+       padding-top: 30px;
       
 
 
