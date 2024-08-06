@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+
+{{ include('navbar.html.twig') }}
+    <h1>Actualité</h1>
+
+  <div class="actuality_itemsShow">
+       
+      <div class="pictureSide">
+       <div>
+                <h3>{{ article.title }}</h3>
+        </div>
+                    <div class="herobannerPicture">
+                            <img class="img-thumbnail" src="{{ asset('uploads/photos/' ~ article.picture1) }}" alt="photo">
+                    </div>
+                
+                    <h3> Autre photo </h3>
+                    <div class="other_pictures">
+                    <img class="img-thumbnail" src="{{ asset('uploads/photos/' ~ article.picture2) }}" alt="photo">
+                    <img class="img-thumbnail" src="{{ asset('uploads/photos/' ~ article.picture3) }}" alt="photo">
+                    </div>
+    <div>
+        <div class="commentSide">
+                <h6>Description</h6>
+                <p>{{ article.description }}</p>
+        </div>
+
+   
+                
+
+
+     </div>
+    <a href="{{ path('app_home') }}"> Voir d'autres actualités </a>
+   
+{% endblock %}
