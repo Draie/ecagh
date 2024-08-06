@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+   {% block stylesheets %}
+     <link rel="stylesheet" {{ asset('assets/style/devNotes.css') }}> 
+
+    {% endblock %}
+{% block title %}Article index{% endblock %}
+
+{% block body %}
+
+    {{ include('admin_navbar.html.twig') }}
+   <div class="devNotice" >
+   <p > Espace administrateur en cours de developpement </p> 
+  </div>
+      <!--- Image des article en cours 
+                        <div class="articleContainer">
+                        <div class="headerTitle">Actualiter en ligne </div>
+                        {% for article in articles %}
+                        <div class="a_items">
+                            
+                        
+                                <h1>{{ article.title }}</h1>
+                                <p>{{ article.description }}</p>
+                                
+                                <div class="picture">
+                                    <img  src="{{ asset('uploads/photos/' ~ article.picture1) }}" alt="photo">
+                                </div>
+                                
+                                <div class="picture">
+                                    <img  src="{{ asset('uploads/photos/' ~ article.picture2) }}" alt="photo">
+                                </div>
+                                
+                                <div class="picture">
+                                    <img  src="{{ asset('uploads/photos/' ~ article.picture3) }}" alt="photo">
+                                </div>
+                        
+                                    <a href="{{ path('app_article_show', {'id': article.id}) }}">Voir</a>
+                                    <a href="{{ path('app_article_edit', {'id': article.id}) }}">Modifier</a>
+                        
+                        </div>
+                        {% else %}
+                            <tr>
+                                <td colspan="7">Pas d'article enregistré</td>
+                            </tr>
+                        {% endfor %}
+                
+
+                    <a href="{{ path('app_article_new') }}">Ajouter un article</a>
+
+-->
+
+
+{% endblock %}
